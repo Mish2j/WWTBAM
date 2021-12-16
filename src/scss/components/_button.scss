@@ -1,0 +1,26 @@
+.btn {
+  padding: 1rem 2.8rem;
+  font-weight: 700;
+  color: $text-primary;
+  border-radius: 0.5rem;
+  border: 1px solid $pink;
+
+  @include gradient-bg;
+
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &--disabled {
+    opacity: 0.4;
+    cursor: auto;
+    color: #868eff;
+    transform: scale(0.9);
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}

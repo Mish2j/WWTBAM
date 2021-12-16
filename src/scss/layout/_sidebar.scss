@@ -1,0 +1,84 @@
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30rem;
+  background: $purple-light;
+  z-index: 9998; // on top of footer
+  overflow-y: auto;
+  transform: translateX(85%);
+  transition: all 0.3s ease-in-out;
+
+  animation-duration: 3s;
+  animation-name: fadeIn;
+
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0;
+
+  @include screen-down($xs-screen) {
+    height: 5rem;
+  }
+
+  &__header {
+    padding: 0 1.5rem;
+  }
+
+  &.slide {
+    transform: translateX(0);
+
+    @include screen-down($xs-screen) {
+      height: 100vh;
+      width: 80%;
+    }
+  }
+
+  &__btn {
+    padding: 0;
+    color: $pink;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    @include flex-center;
+    align-self: flex-start;
+    i {
+      transition: all 0.5s ease;
+    }
+    i.rotate {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__heading {
+    text-align: center;
+    font-weight: 400;
+    width: 70%;
+    margin: $gap-lg auto;
+
+    &--bold {
+      @include heading-bold(2.2rem);
+    }
+  }
+}
+
+.prize {
+  &__list {
+    span + span {
+      margin-left: $gap-md;
+      font-weight: 700;
+    }
+  }
+
+  &__li {
+    padding: 1rem 1.5rem;
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__current {
+    background: $pink;
+    font-size: 2rem;
+  }
+}

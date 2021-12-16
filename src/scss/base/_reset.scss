@@ -1,0 +1,42 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+
+  -webkit-overflow-scrolling: touch;
+
+  @include gradient-bg;
+  position: relative;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+  background: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+}

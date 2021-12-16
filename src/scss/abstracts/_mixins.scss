@@ -1,0 +1,39 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin container {
+  border-radius: 0.5rem;
+  padding: 3rem;
+}
+
+@mixin gradient-bg {
+  background: $purple-light;
+  background: linear-gradient(
+    133deg,
+    $purple-light 0%,
+    $purple 27%,
+    $blue 100%
+  );
+  background-repeat: no-repeat;
+}
+
+@mixin heading-bold($fontSize) {
+  font-size: $fontSize;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+@mixin screen-down($size) {
+  @media all and (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin screen-up($size) {
+  @media all and (min-width: $size) {
+    @content;
+  }
+}

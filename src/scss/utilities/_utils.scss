@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.wrapper {
+  padding-bottom: 8rem;
+  padding-top: 8rem;
+  @include screen-down($xs-screen) {
+    padding-top: 5rem;
+    padding-bottom: 15rem;
+  }
+}
+
+.hidden {
+  display: none !important;
+}

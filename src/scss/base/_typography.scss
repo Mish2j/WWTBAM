@@ -1,0 +1,44 @@
+html {
+  font-size: 62.5%; /* 10px */ /* 10px = 1rem */
+
+  @include screen-up($lg-screen) {
+    font-size: 75%; /*1rem = 12px*/
+  }
+
+  @include screen-down($md-screen) {
+    font-size: 56.25%; /*1rem = 9px */
+  }
+
+  @include screen-down($sm-screen) {
+    font-size: 50%; /*1rem = 8px*/
+  }
+
+  @include screen-down($xxs-screen) {
+    word-break: break-word;
+  }
+}
+
+body {
+  font-family: "Poppins", arial, verdana sans-serif;
+  color: $text-primary;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $text-primary;
+
+  &:visited {
+    color: inherit;
+  }
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}

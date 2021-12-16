@@ -1,0 +1,114 @@
+.main {
+  min-height: 100vh;
+  @include flex-center;
+}
+
+.startingPos {
+  @include flex-center;
+  flex-direction: column;
+  max-width: 28rem;
+  margin: auto;
+  text-align: center;
+
+  &__heading {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+
+    &--bold {
+      @include heading-bold(3.4rem);
+    }
+  }
+
+  &__btn {
+    color: $pink;
+  }
+}
+
+.game {
+  @include flex-center;
+  flex-direction: column;
+
+  animation-duration: 3s;
+  animation-name: fadeIn;
+}
+
+.help__section,
+.question__section {
+  margin-bottom: $gap-lg;
+}
+
+.help {
+  &__container {
+    gap: 2rem;
+  }
+
+  &__btn {
+    font-size: 1.8rem;
+
+    @include screen-down($xxs-screen) {
+      margin: $gap-sm;
+    }
+  }
+}
+
+.question {
+  width: 85%;
+
+  @include screen-down($xxs-screen) {
+    width: 100%;
+  }
+
+  &__container {
+    @include container;
+    @include gradient-bg;
+  }
+
+  &__text {
+    font-family: "Open Sans";
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+
+.answer {
+  width: 85%;
+
+  @include screen-down($xxs-screen) {
+    width: 100%;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap-sm;
+
+    @include screen-down($xs-screen) {
+      flex-direction: column;
+    }
+  }
+
+  &__btn {
+    font-size: 1.7rem;
+    font-family: "Open Sans";
+    font-weight: 400;
+
+    flex: 0 0 calc(50% - ($gap-sm / 2));
+  }
+}
+
+#answer-1 {
+  order: 1;
+}
+
+#answer-2 {
+  order: 3;
+}
+
+#answer-3 {
+  order: 2;
+}
+
+#answer-4 {
+  order: 4;
+}
