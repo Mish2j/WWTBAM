@@ -6,8 +6,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel ./src/index.html",
     "clean": "rm -rf dist/*",
-    "build:parcel": "parcel build ./src/index.html",
-    "build": "npm run clean && npm run build:parcel"
+    "build:parcel": "parcel build ./src/index.html --public-url ./",
+    "build": "npm run clean && npm run build:parcel",
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +17,8 @@
     "autoprefixer": "^10.4.0",
     "parcel": "^2.0.1",
     "postcss": "^8.4.5"
+  },
+  "dependencies": {
+    "push-dir": "^0.4.1"
   }
 }
