@@ -7,8 +7,7 @@
     "start": "parcel ./src/index.html",
     "clean": "rm -rf dist/*",
     "build:parcel": "parcel build ./src/index.html",
-    "build": "npm run clean && npm run build:parcel",
-    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+    "build": "npm run clean && npm run build:parcel"
   },
   "author": "",
   "license": "ISC",
