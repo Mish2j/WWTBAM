@@ -186,7 +186,7 @@ import {
         if (responseData.results.length === 0)
           throw new Error(`Failed to upload new question!`);
 
-        const questionData = responseData.results.at(0);
+        const questionData = responseData.results[0];
 
         const {
           question,
