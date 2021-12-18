@@ -12,7 +12,7 @@ export const getJson = async (url) => {
   }
 };
 
-export const randomValFromR = (arr) => {
+const randomValFromR = (arr) => {
   let randomValue = arr[Math.floor(Math.random() * arr.length)];
   return randomValue;
 };
@@ -34,11 +34,6 @@ export const randomUniqueMultipleElFromArr = (arr, uniqueElements, loops) => {
       randomUniqueMultipleElFromArr(arr, uniqueElements, loops);
     }
   }
-};
-
-export const removeHTMLTags = (str) => {
-  if (str === null || str === "") return false;
-  return str.replace(/(<([^>]+)>)/gi, "");
 };
 
 export const getRandomNum = (min, max) => {
@@ -74,4 +69,11 @@ export const getArrayRandomInts = (maxInitNum, count) => {
   }
 
   return randomNums;
+};
+
+export const decodeHTML = (str) => {
+  let parser = new DOMParser();
+  let dom = parser.parseFromString("<!doctype html><body>" + str, "text/html");
+  let decodedString = dom.body.textContent;
+  return decodedString;
 };

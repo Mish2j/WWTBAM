@@ -94,6 +94,14 @@
     font-weight: 400;
 
     flex: 0 0 calc(50% - ($gap-sm / 2));
+
+    display: flex;
+  }
+
+  &__choice {
+    margin-right: $gap-sm;
+    color: $pink;
+    font-weight: 700;
   }
 }
 
